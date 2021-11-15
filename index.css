@@ -1,134 +1,210 @@
-body {
-    background: rgb(61, 8, 123);
-    margin-left: 13%;
-    margin-top: 5%;
-    zoom: 100%;
-}
-
-.wak {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.wake {
-    position: relative;
-    top: 10px;
-}
-
-select {
-    width: 150px;
-    margin-top: 10px;
-    height: 30px;
-    color: #3D087BDE;
-    border: 0.1px solid #EDEDED;
-}
-
-.box1 {
-    background: white;
-    color: #3D087B;
-    height: 250px;
-    width: 450px;
-    margin-top: 50px;
-    border-radius: 8px;
-    /* Manrope,Regular - 18px; */
-    font-family: Manrope;
-    font-weight: Regular;
-    font-size: 18px;
-    Color: #3D087B;
-}
-
-hr {
-    transform: rotate(90deg);
-    /* height: 5px; */
-    width: 35px;
-    text-decoration: none;
-    margin-left: 25px;
-    background-color: #C2C2C2
-}
-
-.b2 {
-    width: 450px;
-    height: 50px;
-    background: #4f20be;
-    margin-top: 35px;
-    color: #EDEDED;
-    font-size: 27px;
-}
-
-.party {
-    font-size: 27px;
-    padding-left: 90px;
-    padding-top: 10px;
-    margin-top: 15px;
-    width: 299px;
-    height: 50px;
-    background: transparent linear-gradient(113deg, #6E54EC 0%, #CB52F8 40%, #FC5EFF 81%, #F1A7C5 100%);
-    border-radius: 4px;
-    color: white;
-}
-
-.time {
-    background: white;
-    height: 100px;
-    width: 450px;
-    position: absolute;
-    right: 100px;
-    top: 15%;
-    padding-top: 30px;
-    font-size: xx-large;
-    border-radius: 8px;
-    z-index: 2;
-    color: #8E53F0;
-}
-
-.b3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.time1 {
-    background: white;
-    height: 80px;
-    width: 360px;
-    position: absolute;
-    right: 135px;
-    top: 20%;
-    padding-top: 30px;
-    font-size: xx-large;
-    border-radius: 8px;
-    opacity: 40%;
-    z-index: 1;
-}
-
-.time2 {
-    background: white;
-    height: 80px;
-    width: 288px;
-    position: absolute;
-    right: 180px;
-    top: 22%;
-    padding-top: 30px;
-    font-size: xx-large;
-    border-radius: 8px;
-    opacity: 10%;
-}
-
-.letslunch {
-    background: white;
-    position: absolute;
-    right: 110px;
-    top: 40%;
-    width: 550px;
-    padding-top: 30px;
-    font-size: xx-large;
-    border-radius: 8px;
-    z-index: 2;
-    zoom: 83%;
-}
-
-.i1 {
-    padding-left: 20px;
-    color: #8E53F0;
-}
+    body {
+        background: rgb(61, 8, 123);
+        margin-left: 13%;
+        zoom: 100%;
+    }
+    
+    body div img {
+        margin-top: 2%;
+    }
+    
+    .d2 {
+        margin-top: -5%;
+    }
+    
+    .wak {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .wake {
+        position: relative;
+        top: 10px;
+    }
+    
+    select {
+        width: 150px;
+        margin-top: 10px;
+        height: 30px;
+        color: #3D087BDE;
+        border: 0.1px solid #EDEDED;
+    }
+    
+    .box1 {
+        background: white;
+        color: #3D087B;
+        height: 250px;
+        width: 450px;
+        margin-top: 50px;
+        border-radius: 8px;
+        /* Manrope,Regular - 18px; */
+        font-family: Manrope;
+        font-weight: Regular;
+        font-size: 18px;
+        Color: #3D087B;
+    }
+    
+    hr {
+        transform: rotate(90deg);
+        /* height: 5px; */
+        width: 35px;
+        text-decoration: none;
+        margin-left: 25px;
+        background-color: #C2C2C2
+    }
+    
+    .b2 {
+        width: 450px;
+        height: 50px;
+        background: #4f20be;
+        margin-top: 35px;
+        color: #EDEDED;
+        font-size: 27px;
+    }
+    
+    .party {
+        font-size: 27px;
+        padding-left: 90px;
+        padding-top: 10px;
+        margin-top: 15px;
+        width: 299px;
+        height: 50px;
+        background: transparent linear-gradient(113deg, #6E54EC 0%, #CB52F8 40%, #FC5EFF 81%, #F1A7C5 100%);
+        border-radius: 4px;
+        color: white;
+    }
+    
+    .time {
+        background: white;
+        height: 100px;
+        width: 450px;
+        position: absolute;
+        right: 100px;
+        top: 5%;
+        padding-top: 30px;
+        font-size: xx-large;
+        border-radius: 8px;
+        z-index: 2;
+        color: #8E53F0;
+    }
+    
+    .b3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .time1 {
+        background: white;
+        height: 80px;
+        width: 360px;
+        position: absolute;
+        right: 135px;
+        top: 9%;
+        padding-top: 30px;
+        font-size: xx-large;
+        border-radius: 8px;
+        opacity: 40%;
+        z-index: 1;
+    }
+    
+    .time2 {
+        background: white;
+        height: 80px;
+        width: 288px;
+        position: absolute;
+        right: 180px;
+        top: 11%;
+        padding-top: 30px;
+        font-size: xx-large;
+        border-radius: 8px;
+        opacity: 10%;
+    }
+    
+    .letslunch {
+        background: white;
+        position: absolute;
+        right: 110px;
+        top: 32%;
+        width: 550px;
+        padding-top: 30px;
+        font-size: xx-large;
+        border-radius: 8px;
+        z-index: 2;
+        zoom: 83%;
+    }
+    
+    .i1 {
+        padding-left: 20px;
+        color: #8E53F0;
+    }
+    
+    #hi img {
+        position: absolute;
+        top: 15px;
+        z-index: -1;
+        left: 130px;
+        height: 80px;
+    }
+    
+    #mi img {
+        position: absolute;
+        top: 15px;
+        z-index: -1;
+        left: 220px;
+        height: 80px;
+    }
+    
+    #si img {
+        position: absolute;
+        top: 15px;
+        z-index: -1;
+        left: 310px;
+        height: 80px;
+    }
+    
+    .t1 {
+        margin-top: 10px;
+    }
+    
+    #day {
+        margin-top: 10px;
+        margin-left: 260px;
+    }
+    
+    #column1 {
+        position: absolute;
+        left: 200px;
+        top: 20px;
+        font-size: 60px;
+    }
+    
+    #column2 {
+        position: absolute;
+        left: 290px;
+        top: 20px;
+        font-size: 60px;
+    }
+    
+    #timer {
+        position: absolute;
+    }
+    
+    .hours {
+        position: absolute;
+        top: -53px;
+        left: 145px;
+    }
+    
+    .minutes {
+        position: absolute;
+        top: -53px;
+        left: 230px;
+    }
+    
+    .seconds {
+        position: absolute;
+        top: -53px;
+        left: 325px;
+    }

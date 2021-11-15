@@ -10,7 +10,7 @@
     <link rel="icon" href="./images/unnamed.png">
 </head>
 
-<body>
+<body onload="timer()">
     <div>
         <span class="cl"><img src="./images/clock_logo@2x.png" alt=""></span>
     </div>
@@ -65,21 +65,34 @@
         Party time!
     </div>
 
-    <div class="time">
-        <div class="b3">
-            <div class="t1">TIME</div>
-            <div>
-                <span>10</span>:
-                <span>45</span>:
-                <span>01</span>
+    <div class="d2">
+        <div class="time">
+            <div class="b3">
+                <div class="t1">TIME</div>
+                <div>
+                    <span id="hi"><img src="./images/timeline.svg" alt=""></span>
+                    <span id="mi"><img src="./images/timeline.svg" alt=""></span>
+                    <span id="si"><img src="./images/timeline.svg" alt=""></span>
+                </div>
+                <div id="day">AM</div>
+                <div id="column1">:</div>
+                <div id="column2">:</div>
             </div>
-            <div>AM</div>
+            <div id="timer">
+                <div class="hours" id="hours"></div>
+                <div class="minutes" id="minutes"></div>
+                <div class="seconds" id="seconds"></div>
+            </div>
+
         </div>
-    </div>
-    <div class="time1"></div>
-    <div class="time2"></div>
-    <div class="letslunch">
-        <div class="i1">LET'S HAVE SOME LUNCH !!</div><img src="./images/lunch_image.svg" alt="">
+        <div class="time1"></div>
+        <div class="time2"></div>
+        <div class="letslunch">
+            <div class="i1">LET'S HAVE SOME LUNCH !!</div><img src="./images/lunch_image.svg" alt="">
+        </div>
+
+        <script src="./index.js"></script>
+
     </div>
 
 
