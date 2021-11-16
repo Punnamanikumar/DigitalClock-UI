@@ -18,7 +18,8 @@
         <div class="wak">
             <div><img src="./images/wake_up.svg" class="wake" alt=""></div>
             <div style="padding-top: 15px;">Set wake up time</div>
-            <div><select name="" id="">
+            <div name="setwakeup"><select name="" id="wakeup" class="wakeup">
+                <option value="Default" id="wakeup1">Default</option>
                 <option value="">5 AM - 6 AM</option>
                 <option value="">6 AM - 7 AM</option>
                 <option value="">7 AM - 8 AM</option>
@@ -32,6 +33,7 @@
             <div><img src="./images/lunch_time.svg" class="wake" alt=""></div>
             <div style="padding-top: 15px;">Set lunch time </div>
             <div><select name="" id="">
+                <option value="">Default</option>
                 <option value="">11 AM - 12 PM</option>
                 <option value="">12 PM - 1 PM</option>
                 <option value="">1 PM - 2 PM</option>
@@ -45,6 +47,7 @@
             <div><img src="./images/nap_time.svg" class="wake" alt=""></div>
             <div style="padding-top: 15px;">Set nap time </div>
             <div><select name="" id="">
+                <option value="">Default</option>
                 <option value="">6 PM - 7 PM</option>
                 <option value="">7 PM - 8 PM</option>
                 <option value="">8 PM - 9 PM</option>
@@ -58,12 +61,12 @@
             </select></div>
         </div>
     </div>
+    <div><button class="settime" onclick=wakeUpTime()>Set time!</button></div>
+
     <div class="b2">
-        GOOD AFTERNOON !!
+        Hii, Have a Great DAY...
     </div>
-    <div class="party">
-        Party time!
-    </div>
+
 
     <div class="d2">
         <div class="time">

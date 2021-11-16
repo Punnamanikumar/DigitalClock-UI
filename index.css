@@ -56,23 +56,29 @@
     
     .b2 {
         width: 450px;
-        height: 50px;
+        /* height: 50px; */
         background: #4f20be;
         margin-top: 35px;
         color: #EDEDED;
         font-size: 27px;
+        /* padding-top: px; */
     }
     
-    .party {
+    .settime {
         font-size: 27px;
-        padding-left: 90px;
-        padding-top: 10px;
+        padding-top: 5px;
         margin-top: 15px;
         width: 299px;
         height: 50px;
         background: transparent linear-gradient(113deg, #6E54EC 0%, #CB52F8 40%, #FC5EFF 81%, #F1A7C5 100%);
         border-radius: 4px;
         color: white;
+        border: none;
+        transition: transform 2s;
+    }
+    
+    .settime:hover {
+        transform: scale(1.1, 1.1);
     }
     
     .time {
