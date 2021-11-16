@@ -54,7 +54,128 @@ function timer() {
     e.innerText = ampm;
 }
 
+// function wakeUpTime() {
+//     var wkup = document.getElementById("wakeup").value;
+//     // console.log(wkup);
+
+//     const wkupvalue = document.getElementsByClassName("b2");
+//     wkupvalue[0].innerText = "Wake up Time is " + wkup;
+//     // console.log(wkupvalue);
+//     if (wkup == "default" || lht == "default") {
+//         wkupvalue[0].innerText = " OOPS Default!!";
+//     } else {
+//         const wkupvalue = document.getElementsByClassName("b2");
+//         wkupvalue[0].innerText = "Wake up Time is " + wkup;
+//     }
+
+//     function lunchTime() {
+//         var lht = document.getElementById("lunch").value;
+//         console.log(lht);
+
+//         const lhtvalue = document.getElementsByClassName("b2");
+//         lhtvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht;
+//         console.log(lhtvalue);
+
+//         if (lht == "default" && wkup == "default") {
+//             wkupvalue[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!";
+
+
+//         } else {
+//             lhtvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht;
+//         }
+
+//     }
+//     lunchTime();
+
+//     function napTime() {
+//         var nap = document.getElementById("nap").value;
+//         console.log(nap);
+
+//         const napvalue = document.getElementsByClassName("b2");
+//         napvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is" + nap;
+//         console.log(napvalue);
+
+//         if (lht == "default" && wkup == "default" && nap == "default") {
+//             napvalue[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!" + "\n" + "OOPS Default!!";
+
+
+//         } else {
+//             napvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is" + nap;
+//         }
+
+//     }
+//     napTime();
+
+// }
+
+//////////////////////////////////////////////////////////////////////
+
 function wakeUpTime() {
-    var wkup = document.getSelection(".wakeup").value;
-    console.log(wkup);
+
+    var wkup = document.getElementById("wakeup").value;
+    var lht = document.getElementById("lunch").value;
+    var nap = document.getElementById("nap").value;
+    const value = document.getElementsByClassName("b2");
+
+    if (wkup == "default" && lht == "default" && nap == "default") {
+        value[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!" + "\n" + "OOPS Default!!";
+    } else if ((wkup == "default") && (lht != "default") && (nap != "default")) {
+        value[0].innerText = "OOPS Default!! " + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is " + nap;
+
+    } else if ((wkup == "default") && (lht == "default") && (nap != "default")) {
+        value[0].innerText = "OOPS Default!! " + "\n" + "OOPS Default!! " + "\n" + "Nap Time is " + nap;
+
+    } else if ((wkup == "default") && (lht == "default") && (nap != "default")) {
+        value[0].innerText = "OOPS Default!! " + "\n" + "OOPS Default!! " + "\n" + "Nap Time is " + nap;
+
+    } else {
+        value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is " + nap;
+    }
+    console.log(lht, nap);
+
+
+    // wkupvalue[0].innerText = "Wake up Time is " + wkup;
+    // // console.log(wkupvalue);
+    // if (wkup == "default" || lht == "default") {
+    //     value[0].innerText = " OOPS Default!!";
+    // } else {
+    //     const wkupvalue = document.getElementsByClassName("b2");
+    //     value[0].innerText = "Wake up Time is " + wkup;
+    // }
+
+    // function lunchTime() {
+    //     console.log(lht);
+
+    //     value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht;
+    //     console.log(lhtvalue);
+
+    //     if (lht == "default" && wkup == "default") {
+    //         value[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!";
+
+
+    //     } else {
+    //         value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht;
+    //     }
+
+    // }
+    // lunchTime();
+
+    // function napTime() {
+    //     console.log(nap);
+
+    //     napvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is" + nap;
+    //     console.log(napvalue);
+
+    //     if (lht == "default" && wkup == "default" && nap == "default") {
+    //         napvalue[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!" + "\n" + "OOPS Default!!";
+
+
+    //     } else {
+    //         napvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is" + nap;
+    //     }
+
+    // }
+    // napTime();
+
+
 }
