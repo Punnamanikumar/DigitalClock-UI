@@ -134,11 +134,13 @@
         right: 110px;
         top: 32%;
         width: 550px;
-        padding-top: 30px;
+        /* padding-top: 30px; */
         font-size: xx-large;
         border-radius: 8px;
         z-index: 2;
         zoom: 83%;
+        height: 500px;
+        width: 500px;
     }
     
     .i1 {
@@ -214,3 +216,7 @@
         top: -53px;
         left: 325px;
     }
+    /* #defaultimg {
+        height: 100%;
+        width: 100%;
+    } */

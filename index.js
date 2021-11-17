@@ -139,6 +139,9 @@ function wakeUpTime() {
     } else {
         value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is " + nap;
     }
+    chkwkup();
+    chklunch();
+    chknap();
     // console.log(lht, nap);
 
     // if(h==do){
@@ -159,17 +162,97 @@ function wakeUpTime() {
     // }
     // var x = document.getElementsByClassName("lunch")[0].getAttribute("class");
     // console.log(x);
-    const today1 = new Date();
-    let ho = today1.getHours();
+    // const today1 = new Date();
+    // let ho = today1.getHours();
 
-    var lht1 = document.getElementById("lunch").value.slice(0, 2);
-    console.log(lht1);
+    function chkwkup() {
+        let x = document.getElementById("wakeup").value.slice(0, 2);
+        var y = document.getElementById("hours").innerText.slice(0, 2);
+        let n = y.toString();
 
-    // if (ho == lht.((value))) {
-    //     console.log("match");
-    // } else {
-    //     console.log("not");
-    // }
+        if (n == x) {
+            console.log("match");
+            document.getElementById("defaultimg").src = "./images/wakeup_image.svg"
+        } else if (x[0] == y[0]) {
+            document.getElementById("defaultimg").src = "./images/wakeup_image.svg"
+
+        } else {
+            console.log("not match");
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+        }
+
+
+    }
+
+
+    function chklunch() {
+        let x = document.getElementById("lunch").value.slice(0, 2);
+        var y = document.getElementById("hours").innerText.slice(0, 2);
+        let n = y.toString();
+
+        if (n == x) {
+            console.log("match");
+            document.getElementById("defaultimg").src = "./images/lunch_image.svg";
+        } else if (x[0] == y[0]) {
+            document.getElementById("defaultimg").src = "./images/lunch_image.svg";
+
+        } else {
+            console.log("not match");
+            document.getElementById("defaultimg").src = "./images/default.jpg";
+        }
+
+
+    }
+
+    function chknap() {
+        // let lht1 = document.getElementById("nap").value.slice(0, 2);
+        // console.log(lht1);
+
+        let y = document.getElementById("nap").value.slice(0, 2);
+        // var h = parseInt(y);
+        // console.log(typeof(h));
+        // console.log(y.length);
+
+        var ok = document.getElementById("hours").innerText.slice(0, 2);
+        // console.log(ok);
+        // console.log(ok.length);
+        let n = ok.toString();
+        // console.log(typeof(n));
+        // console.log(n.length);
+
+        //matching only for 10
+        if (n === y) {
+            console.log("match");
+        } else {
+            console.log("not");
+        }
+
+        let today = new Date;
+        let d = today.getHours;
+        let ampm1 = d >= 12 ? 'AM' : 'PM';
+        // console.log(ampm1);
+        var amorpm = document.getElementById("nap").value;
+        let amorpm1 = (amorpm.slice(amorpm.length - 2));
+        // console.log(typeof(amorpm));
+
+        if (amorpm1 == ampm1) {
+            if (n == y) {
+                console.log("match");
+                document.getElementById("defaultimg").src = "./images/goodnight_image.svg"
+            } else if (y[0] == ok[0]) {
+                document.getElementById("defaultimg").src = "./images/goodnight_image.svg"
+
+            } else {
+                console.log("not match");
+                document.getElementById("defaultimg").src = "./images/default.jpg"
+            }
+        }
+
+
+
+
+    }
+
 
 
 
