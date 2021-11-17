@@ -128,54 +128,56 @@ function wakeUpTime() {
     } else if ((wkup == "default") && (lht == "default") && (nap != "default")) {
         value[0].innerText = "OOPS Default!! " + "\n" + "OOPS Default!! " + "\n" + "Nap Time is " + nap;
 
+    } else if ((wkup != "default") && (lht == "default") && (nap == "default")) {
+        value[0].innerText = "Wake up Time is " + wkup + "\n" + "OOPS Default!! " + "\n" + "OOPS Default!! ";
+
+    } else if ((wkup == "default") && (lht != "default") && (nap == "default")) {
+        value[0].innerText = "OOPS Default!! " + "\n" + "Lunch Time is " + lht + "\n" + "OOPS Default!! ";
+
+    } else if ((wkup != "default") && (lht == "default") && (nap != "default")) {
+        value[0].innerText = "Wake up Time is " + wkup + "\n" + "OOPS Default!! " + "\n" + "Nap Time is " + nap;
     } else {
         value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is " + nap;
     }
-    console.log(lht, nap);
+    // console.log(lht, nap);
+
+    // if(h==do){
+
+    // }
+
+    // var g = document.getElementsByClassName("name");
+
+    // var wkup2 = document.getElementById("wakeup").getAttributeNames(attributes);
+    // console.log(wkup2);
 
 
-    // wkupvalue[0].innerText = "Wake up Time is " + wkup;
-    // // console.log(wkupvalue);
-    // if (wkup == "default" || lht == "default") {
-    //     value[0].innerText = " OOPS Default!!";
+    // console.log(g);
+
+
+    // function myFunction() {
+    //     document.getElementById("demo").innerHTML = x;
+    // }
+    // var x = document.getElementsByClassName("lunch")[0].getAttribute("class");
+    // console.log(x);
+    const today1 = new Date();
+    let ho = today1.getHours();
+
+    var lht1 = document.getElementById("lunch").value.slice(0, 2);
+    console.log(lht1);
+
+    // if (ho == lht.((value))) {
+    //     console.log("match");
     // } else {
-    //     const wkupvalue = document.getElementsByClassName("b2");
-    //     value[0].innerText = "Wake up Time is " + wkup;
+    //     console.log("not");
     // }
 
-    // function lunchTime() {
-    //     console.log(lht);
-
-    //     value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht;
-    //     console.log(lhtvalue);
-
-    //     if (lht == "default" && wkup == "default") {
-    //         value[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!";
-
-
-    //     } else {
-    //         value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht;
-    //     }
-
-    // }
-    // lunchTime();
-
-    // function napTime() {
-    //     console.log(nap);
-
-    //     napvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is" + nap;
-    //     console.log(napvalue);
-
-    //     if (lht == "default" && wkup == "default" && nap == "default") {
-    //         napvalue[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!" + "\n" + "OOPS Default!!";
-
-
-    //     } else {
-    //         napvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is" + nap;
-    //     }
-
-    // }
-    // napTime();
 
 
 }
+
+// if ( ((HH >= 8) && (HH < 18)) && ((DOW >= 1) && (DOW <= 6)) ) {
+//         document.getElementById('logo').src = logos[0];
+//       } else {
+//         document.getElementById('logo').src = logos[1];
+//       }
+//     }
