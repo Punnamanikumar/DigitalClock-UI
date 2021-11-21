@@ -1,266 +1,205 @@
 function timer() {
     const today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    let s = today.getSeconds();
-    // let d=today.get
-    h = checkTime1(h)
+    var h = today.getHours();
+    var hh = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+
+    //Check Time
+    h = checkHours(h);
     m = checkTime(m);
     s = checkTime(s);
+    var a = document.getElementById("hours");
+    a.innerText = h;
+    var b = document.getElementById("minutes");
+    b.innerText = m;
+    const c = document.getElementById("seconds");
+    c.innerText = s;
 
-
-    const h1 = document.getElementById("hours")
-    h1.innerText = h + "\n" + "hrs";
-    // console.log(h1.innerText);
-
-
-
-    const m1 = document.getElementById("minutes")
-    m1.innerText = m + "\n" + "min";
-    // console.log(m1.innerText);
-
-    const s1 = document.getElementById("seconds")
-    s1.innerText = s + "\n" + "sec";
-    // console.log(s1.innerText);
-    setTimeout(timer, 1000);
-
+    var ampm = document.getElementById("day");
+    if (hh >= 12) {
+        ampm.innerText = "PM";
+    } else if (hh == 0) {
+        ampm.innerText = "AM";
+    } else {
+        ampm.innerText = "AM";
+    }
+    //  Check Time 
     function checkTime(i) {
         if (i < 10) {
-            i = "0" + i
+            i = "0" + i;
         }
         return i;
     }
-
-    function checkTime1(i) {
-        if (i > 12) {
+    //12HRS Clock Time
+    function checkHours(i) {
+        if (h > 12) {
             i = i - 12;
         }
         return i;
     }
-
-    // function day() {
-    //     let d = today.getHours;
-    //     if (d < 12) {
-    //         console.log("PM");
-    //     } else
-    //         console.log("AM");
-
-    // }
-    // day();
-    //FOR AM and PM
-    let d = today.getHours;
-    var ampm = d >= 12 ? 'AM' : 'PM';
-    const e = document.getElementById("day");
-    e.innerText = ampm;
 }
 
-// function wakeUpTime() {
-//     var wkup = document.getElementById("wakeup").value;
-//     // console.log(wkup);
 
-//     const wkupvalue = document.getElementsByClassName("b2");
-//     wkupvalue[0].innerText = "Wake up Time is " + wkup;
-//     // console.log(wkupvalue);
-//     if (wkup == "default" || lht == "default") {
-//         wkupvalue[0].innerText = " OOPS Default!!";
-//     } else {
-//         const wkupvalue = document.getElementsByClassName("b2");
-//         wkupvalue[0].innerText = "Wake up Time is " + wkup;
-//     }
-
-//     function lunchTime() {
-//         var lht = document.getElementById("lunch").value;
-//         console.log(lht);
-
-//         const lhtvalue = document.getElementsByClassName("b2");
-//         lhtvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht;
-//         console.log(lhtvalue);
-
-//         if (lht == "default" && wkup == "default") {
-//             wkupvalue[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!";
+setInterval(timer, 1000);
 
 
-//         } else {
-//             lhtvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht;
-//         }
-
-//     }
-//     lunchTime();
-
-//     function napTime() {
-//         var nap = document.getElementById("nap").value;
-//         console.log(nap);
-
-//         const napvalue = document.getElementsByClassName("b2");
-//         napvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is" + nap;
-//         console.log(napvalue);
-
-//         if (lht == "default" && wkup == "default" && nap == "default") {
-//             napvalue[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!" + "\n" + "OOPS Default!!";
 
 
-//         } else {
-//             napvalue[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is" + nap;
-//         }
-
-//     }
-//     napTime();
-
-// }
-
-//////////////////////////////////////////////////////////////////////
 
 function wakeUpTime() {
 
-    var wkup = document.getElementById("wakeup").value;
-    var lht = document.getElementById("lunch").value;
-    var nap = document.getElementById("nap").value;
+    const today1 = new Date();
+    var h1 = today1.getHours();
+    console.log(h1);
     const value = document.getElementsByClassName("b2");
+    var wku = document.getElementById("wakeup");
+    // console.log(wku.value);
+    var wkup = wku.options[wku.selectedIndex].innerText;
+    var lh = document.getElementById("lunch");
+    var lht = lh.options[lh.selectedIndex].innerText;
+    var na = document.getElementById("nap");
+    var nap = na.options[na.selectedIndex].innerText;
 
-    if (wkup == "default" && lht == "default" && nap == "default") {
+    if (wku.value == "default" && lh.value == "default" && na.value == "default") {
         value[0].innerText = " OOPS Default!!" + "\n" + "OOPS Default!!" + "\n" + "OOPS Default!!";
-    } else if ((wkup == "default") && (lht != "default") && (nap != "default")) {
+        document.getElementById("i1").innerText = "SET TIME !!";
+        document.getElementById("defaultimg").src = "./images/default.jpg"
+
+    } else if ((wku.value == "default") && (lh.value != "default") && (na.value != "default")) {
         value[0].innerText = "OOPS Default!! " + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is " + nap;
+        setLunch();
 
-    } else if ((wkup == "default") && (lht == "default") && (nap != "default")) {
+    } else if ((wku.value == "default") && (lh.value == "default") && (na.value != "default")) {
         value[0].innerText = "OOPS Default!! " + "\n" + "OOPS Default!! " + "\n" + "Nap Time is " + nap;
+        setNap();
 
-    } else if ((wkup == "default") && (lht == "default") && (nap != "default")) {
-        value[0].innerText = "OOPS Default!! " + "\n" + "OOPS Default!! " + "\n" + "Nap Time is " + nap;
-
-    } else if ((wkup != "default") && (lht == "default") && (nap == "default")) {
+    } else if ((wku.value != "default") && (lh.value == "default") && (na.value == "default")) {
         value[0].innerText = "Wake up Time is " + wkup + "\n" + "OOPS Default!! " + "\n" + "OOPS Default!! ";
+        setWakeup();
 
-    } else if ((wkup == "default") && (lht != "default") && (nap == "default")) {
+    } else if ((wku.value != "default") && (lh.value != "default") && (na.value == "default")) {
+        value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "OOPS Default!! ";
+        setWakeup();
+
+    } else if ((wku.value == "default") && (lh.value != "default") && (na.value == "default")) {
         value[0].innerText = "OOPS Default!! " + "\n" + "Lunch Time is " + lht + "\n" + "OOPS Default!! ";
+        setLunch();
 
-    } else if ((wkup != "default") && (lht == "default") && (nap != "default")) {
+    } else if ((wku.value != "default") && (lh.value == "default") && (na.value != "default")) {
         value[0].innerText = "Wake up Time is " + wkup + "\n" + "OOPS Default!! " + "\n" + "Nap Time is " + nap;
+        setWakeup();
+
     } else {
         value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is " + nap;
     }
-    chkwkup();
-    chklunch();
-    chknap();
-    // console.log(lht, nap);
-
-    // if(h==do){
-
-    // }
-
-    // var g = document.getElementsByClassName("name");
-
-    // var wkup2 = document.getElementById("wakeup").getAttributeNames(attributes);
-    // console.log(wkup2);
 
 
-    // console.log(g);
-
-
-    // function myFunction() {
-    //     document.getElementById("demo").innerHTML = x;
-    // }
-    // var x = document.getElementsByClassName("lunch")[0].getAttribute("class");
-    // console.log(x);
-    // const today1 = new Date();
-    // let ho = today1.getHours();
-
-    function chkwkup() {
-        let x = document.getElementById("wakeup").value.slice(0, 2);
-        var y = document.getElementById("hours").innerText.slice(0, 2);
-        let n = y.toString();
-
-        if (n == x) {
-            console.log("match");
+    //Change Images for Wakeup
+    function setWakeup() {
+        if (wku.value == h1 && wku.value < 12) {
+            console.log("MATCH");
+            document.getElementById("i1").innerText = "Good Morning :) Its Wake Up Time..."
             document.getElementById("defaultimg").src = "./images/wakeup_image.svg"
-        } else if (x[0] == y[0]) {
-            document.getElementById("defaultimg").src = "./images/wakeup_image.svg"
+        } else if (wku.value < 12) {
+            document.getElementById("i1").innerText = "Good Morning :)"
+            document.getElementById("defaultimg").src = "./images/default.jpg"
 
+        } else if ((wku.value >= 12 && wku.value < 17) && wku.value == h1) {
+            document.getElementById("i1").innerText = "Good Afternoon :)" + "\n" + " Have Some Lunch";
+            document.getElementById("defaultimg").src = "./images/lunch_image.svg";
+
+        } else if (wku.value >= 17 && wku.value == h1) {
+            document.getElementById("i1").innerText = "Its Nap Time.. :)";
+            document.getElementById("defaultimg").src = "./images/goodnight_image.svg"
+        } else if (wku.value >= 12 && wku.value <= 16) {
+            document.getElementById("i1").innerText = "Good Afternoon :)";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+        } else if (wku.value >= 17 && wku.value <= 18) {
+            document.getElementById("i1").innerText = "Good Evening :)";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+        } else if (wku.value >= 18) {
+            document.getElementById("i1").innerText = "Good Night :)";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+
+        } else if (wku.value == 'default') {
+            document.getElementById("i1").innerText = "SET TIME !!";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
         } else {
-            console.log("not match");
+            document.getElementById("i1").innerText = " "
             document.getElementById("defaultimg").src = "./images/default.jpg"
         }
-
-
     }
 
+    // For Lunch Images
+    function setLunch() {
+        if (lh.value == h1 && lh.value < 12) {
+            console.log("MATCH");
+            document.getElementById("i1").innerText = "Good Morning :) Its Wake Up Time..."
+            document.getElementById("defaultimg").src = "./images/wakeup_image.svg"
+        } else if (lh.value < 12) {
+            document.getElementById("i1").innerText = "Good Morning :)"
+            document.getElementById("defaultimg").src = "./images/default.jpg"
 
-    function chklunch() {
-        let x = document.getElementById("lunch").value.slice(0, 2);
-        var y = document.getElementById("hours").innerText.slice(0, 2);
-        let n = y.toString();
-
-        if (n == x) {
-            console.log("match");
+        } else if ((lh.value >= 12 && lh.value < 17) && lh.value == h1) {
+            document.getElementById("i1").innerText = "Good Afternoon :)" + "\n" + " Have Some Lunch";
             document.getElementById("defaultimg").src = "./images/lunch_image.svg";
-        } else if (x[0] == y[0]) {
+
+        } else if (lh.value >= 17 && lh.value == h1) {
+            document.getElementById("i1").innerText = "Its Nap Time.. :)";
+            document.getElementById("defaultimg").src = "./images/goodnight_image.svg"
+        } else if (lh.value >= 12 && lh.value <= 16) {
+            document.getElementById("i1").innerText = "Good Afternoon :)";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+        } else if (lh.value >= 17 && lh.value <= 18) {
+            document.getElementById("i1").innerText = "Good Evening :)";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+        } else if (lh.value >= 18) {
+            document.getElementById("i1").innerText = "Good Night :)";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+
+        } else if (lh.value == 'default') {
+            document.getElementById("i1").innerText = "SET TIME !!";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+        } else {
+            document.getElementById("i1").innerText = " "
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+        }
+    }
+
+    // // //FOR NAP Images
+    function setNap() {
+        if (na.value == h1 && na.value < 12) {
+            console.log("MATCH");
+            document.getElementById("i1").innerText = "Good Morning :) Its Nap Time..."
+            document.getElementById("defaultimg").src = "./images/wakeup_image.svg"
+        } else if (na.value < 12) {
+            document.getElementById("i1").innerText = "Good Morning :)"
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+
+        } else if ((na.value >= 12 && na.value < 17) && na.value == h1) {
+            document.getElementById("i1").innerText = "Good Afternoon :)" + "\n" + " Have Some Lunch";
             document.getElementById("defaultimg").src = "./images/lunch_image.svg";
 
+        } else if (na.value >= 17 && na.value == h1) {
+            document.getElementById("i1").innerText = "Its Nap Time.. :)";
+            document.getElementById("defaultimg").src = "./images/goodnight_image.svg"
+        } else if (na.value >= 12 && na.value <= 16) {
+            document.getElementById("i1").innerText = "Good Afternoon :)";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+        } else if (na.value >= 17 && na.value <= 18) {
+            document.getElementById("i1").innerText = "Good Evening :)";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+        } else if (na.value >= 18) {
+            document.getElementById("i1").innerText = "Good Night :)";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
+
+        } else if (na.value == 'default') {
+            document.getElementById("i1").innerText = "SET TIME !!";
+            document.getElementById("defaultimg").src = "./images/default.jpg"
         } else {
-            console.log("not match");
-            document.getElementById("defaultimg").src = "./images/default.jpg";
+            document.getElementById("i1").innerText = " "
+            document.getElementById("defaultimg").src = "./images/default.jpg"
         }
-
-
     }
-
-    function chknap() {
-        // let lht1 = document.getElementById("nap").value.slice(0, 2);
-        // console.log(lht1);
-
-        let y = document.getElementById("nap").value.slice(0, 2);
-        // var h = parseInt(y);
-        // console.log(typeof(h));
-        // console.log(y.length);
-
-        var ok = document.getElementById("hours").innerText.slice(0, 2);
-        // console.log(ok);
-        // console.log(ok.length);
-        let n = ok.toString();
-        // console.log(typeof(n));
-        // console.log(n.length);
-
-        //matching only for 10
-        if (n === y) {
-            console.log("match");
-        } else {
-            console.log("not");
-        }
-
-        let today = new Date;
-        let d = today.getHours;
-        let ampm1 = d >= 12 ? 'AM' : 'PM';
-        // console.log(ampm1);
-        var amorpm = document.getElementById("nap").value;
-        let amorpm1 = (amorpm.slice(amorpm.length - 2));
-        // console.log(typeof(amorpm));
-
-        if (amorpm1 == ampm1) {
-            if (n == y) {
-                console.log("match");
-                document.getElementById("defaultimg").src = "./images/goodnight_image.svg"
-            } else if (y[0] == ok[0]) {
-                document.getElementById("defaultimg").src = "./images/goodnight_image.svg"
-
-            } else {
-                console.log("not match");
-                document.getElementById("defaultimg").src = "./images/default.jpg"
-            }
-        }
-
-
-
-
-    }
-
-
-
-
 }
-
-// if ( ((HH >= 8) && (HH < 18)) && ((DOW >= 1) && (DOW <= 6)) ) {
-//         document.getElementById('logo').src = logos[0];
-//       } else {
-//         document.getElementById('logo').src = logos[1];
-//       }
-//     }

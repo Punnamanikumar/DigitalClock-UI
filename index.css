@@ -38,7 +38,6 @@
         width: 450px;
         margin-top: 50px;
         border-radius: 8px;
-        /* Manrope,Regular - 18px; */
         font-family: Manrope;
         font-weight: Regular;
         font-size: 18px;
@@ -55,13 +54,15 @@
     }
     
     .b2 {
-        width: 450px;
-        /* height: 50px; */
+        width: 400px;
         background: #4f20be;
         margin-top: 35px;
         color: #EDEDED;
         font-size: 27px;
-        /* padding-top: px; */
+        border-radius: 9px;
+        padding-left: 15px;
+        padding-top: 2.5px;
+        padding-bottom: 2.5px;
     }
     
     .settime {
@@ -78,7 +79,7 @@
     }
     
     .settime:hover {
-        transform: scale(1.1, 1.1);
+        background: transparent linear-gradient(280deg, #6E54EC 0%, #CB52F8 40%, #FC5EFF 81%, #F1A7C5 100%);
     }
     
     .time {
@@ -121,7 +122,7 @@
         width: 288px;
         position: absolute;
         right: 180px;
-        top: 11%;
+        top: 10.3%;
         padding-top: 30px;
         font-size: xx-large;
         border-radius: 8px;
@@ -134,7 +135,6 @@
         right: 110px;
         top: 32%;
         width: 550px;
-        /* padding-top: 30px; */
         font-size: xx-large;
         border-radius: 8px;
         z-index: 2;
@@ -216,7 +216,24 @@
         top: -53px;
         left: 325px;
     }
-    /* #defaultimg {
-        height: 100%;
-        width: 100%;
-    } */
+    
+    #hrs {
+        position: absolute;
+        top: -10px;
+        left: 135px;
+        font-size: 25px;
+    }
+    
+    #mins {
+        position: absolute;
+        top: -10px;
+        left: 230px;
+        font-size: 28px;
+    }
+    
+    #sec {
+        position: absolute;
+        top: -10px;
+        left: 330px;
+        font-size: 28px;
+    }
