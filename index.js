@@ -94,9 +94,9 @@ function wakeUpTime() {
         value[0].innerText = "Wake up Time is " + wkup + "\n" + "Lunch Time is " + lht + "\n" + "Nap Time is " + nap;
     }
 
-    setInterval(setWakeup, 1000);
-    setInterval(setLunch, 1000);
-    setInterval(setNap, 1000);
+    // setInterval(setWakeup, 1000);
+    // setInterval(setLunch, 1000);
+    // setInterval(setNap, 1000);
 
     //Change Images for Wakeup
     function setWakeup() {
